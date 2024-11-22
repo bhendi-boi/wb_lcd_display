@@ -14,6 +14,10 @@ class transaction extends uvm_sequence_item;
     // outputs
     logic wb_ack_o;
     logic wb_err_o;
+    logic [3:0] SF_D;
+    logic LCD_E;
+    logic LCD_RS;
+    logic LCD_RW;
 
     function new(string name = "transaction");
         super.new(name);
