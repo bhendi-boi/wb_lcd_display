@@ -37,10 +37,10 @@ class monitor extends uvm_monitor;
             return;
         end
         @(posedge vif.wb_ack_o);
-        tr.wb_we_i   = vif.wb_we_i;
-        tr.wb_addr_i = vif.wb_addr_i;
-        tr.wb_data_i = vif.wb_data_i;
-        tr.wb_data_o = vif.wb_data_o;
+        tr.wb_we_i  = vif.wb_we_i;
+        tr.wb_adr_i = vif.wb_adr_i;
+        tr.wb_dat_i = vif.wb_dat_i;
+        tr.wb_dat_o = vif.wb_dat_o;
         @(posedge vif.wb_clk_i);
         // waiting for strb to go low
     endtask

@@ -35,12 +35,12 @@ class driver extends uvm_driver #(transaction);
         end else begin
             if (tr.wb_we_i) begin
                 @(posedge vif.wb_clk_i);
-                vif.wb_rst_i  <= 1'b0;
-                vif.wb_we_i   <= tr.wb_we_i;
-                vif.wb_strb_i <= 1'b1;
-                vif.wb_cyc_i  <= 1'b1;
-                vif.wb_adr_i  <= tr.wb_adr_i;
-                vif.wb_data_i <= tr.wb_data_i;
+                vif.wb_rst_i <= 1'b0;
+                vif.wb_we_i  <= tr.wb_we_i;
+                vif.wb_stb_i <= 1'b1;
+                vif.wb_cyc_i <= 1'b1;
+                vif.wb_adr_i <= tr.wb_adr_i;
+                vif.wb_dat_i <= tr.wb_dat_i;
                 @(posedge vif.wb_ack_o);
                 @(posedge vif.wb_clk_i);
                 vif.wb_stb_i <= 1'b0;

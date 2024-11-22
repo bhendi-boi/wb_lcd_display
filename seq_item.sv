@@ -3,7 +3,7 @@ class transaction extends uvm_sequence_item;
 
     // inputs
     rand logic wb_rst_i;
-    rand logic [7:0] wb_data_i;
+    rand logic [7:0] wb_dat_i;
     rand logic [7:0] wb_dat_o;
     rand logic [6:0] wb_adr_i;
     rand logic [3:0] wb_sel_i;
@@ -30,7 +30,7 @@ class transaction extends uvm_sequence_item;
         printer.print_field_int("Write/Read", wb_we_i, 1, UVM_HEX);
         printer.print_field_int("Address", wb_adr_i, 7, UVM_HEX);
         printer.print_field_int("Byte select", wb_sel_i, 4, UVM_HEX);
-        printer.print_field_int("Write Data", wb_data_i, 8, UVM_HEX);
+        printer.print_field_int("Write Data", wb_dat_i, 8, UVM_HEX);
         printer.print_field_int("Read Data", wb_dat_o, 8, UVM_HEX);
     endfunction
 

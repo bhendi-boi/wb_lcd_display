@@ -26,9 +26,9 @@ module top ();
     wb_lcd dut (
         .wb_clk_i(intf.wb_clk_i),
         .wb_rst_i(intf.wb_rst_i),
-        .wb_data_i(intf.wb_data_i),
-        .wb_data_o(intf.wb_data_o),
-        .wb_addr_i(intf.wb_addr_i),
+        .wb_dat_i(intf.wb_dat_i),
+        .wb_dat_o(intf.wb_dat_o),
+        .wb_adr_i(intf.wb_adr_i),
         .wb_sel_i(intf.wb_sel_i),
         .wb_we_i(intf.wb_we_i),
         .wb_cyc_i(intf.wb_cyc_i),
