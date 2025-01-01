@@ -71,3 +71,9 @@ It's commonly used to drive several character displays integrated in popular Xil
 | `LCD_RW`    | Same as LCD                     |
 
 - lcd ram has only 66:0 words. So wb_addr_i should be less than 67
+- `wb_sel_i` is not used anywhere.
+- For a valid transaction `cs` should be enabled.
+- `cs` is and of `wb_clk_i` and `wb_stb_i`. This is taken care of in in [driver.sv](driver.sv).
+- To write/read `wb_we_i` should be 1/0 when `cs` is on.
+- Can write to `lcd` if address is not `special_address`. Any value of `wb_addr_i` other than `32'h00000080` will satisfy.
+- Even though wb interface is of 4 bytes. LCD only accepts one byte. So, all the information should be contained in that.

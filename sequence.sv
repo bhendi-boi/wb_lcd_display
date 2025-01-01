@@ -39,6 +39,7 @@ class valid_rand_seq extends uvm_sequence;
             tr.randomize() with {
                 wb_rst_i == 0;
                 wb_adr_i <= 7'd66;
+                wb_dat_i inside {[0,127]};
             };
             finish_item(tr);
         end
