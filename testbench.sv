@@ -43,7 +43,7 @@ module top ();
 
     initial begin
         uvm_config_db#(virtual wb_if)::set(null, "*", "vif", intf);
-        run_test("random_test");
+        run_test("rand_test");
     end
 
     initial begin
