@@ -69,3 +69,5 @@ It's commonly used to drive several character displays integrated in popular Xil
 | `LCD_E`     | Same as LCD                     |
 | `LCD_RS`    | Same as LCD                     |
 | `LCD_RW`    | Same as LCD                     |
+
+- lcd ram has only 66:0 words. So wb_addr_i should be less than 67
