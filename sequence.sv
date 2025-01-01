@@ -28,7 +28,7 @@ class valid_rand_seq extends uvm_sequence;
         super.new(name);
     endfunction
 
-    function set_no_of_tr(int no_of_tr);
+    function void set_no_of_tr(int no_of_tr);
         this.no_of_tr = no_of_tr;
     endfunction
 
